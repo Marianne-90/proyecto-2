@@ -1,3 +1,6 @@
+
+
+
 export const Home = () => {
-    return <h2>Home</h2>;
+    return <><h1>"hola"</h1> </>;
 };
