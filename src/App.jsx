@@ -1,11 +1,12 @@
 
 import './App.css'
-import {Home} from "./pages"
+import { ProyectRoutes } from 'routes/ProyectRoutes'
+
 function App() {
 
   return (
     <>
-    <Home/>
+    <ProyectRoutes/>
     </>
   )
 }

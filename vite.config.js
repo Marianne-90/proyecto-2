@@ -11,6 +11,7 @@ export default defineConfig({
       img:"/src/img",
       hooks:"/src/hooks",
       data:"/src/data",
+      routes:"/src/routes",
     },
   },
 });
