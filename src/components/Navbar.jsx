@@ -1,12 +1,25 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import useScreenGoingDown from "hooks/useScreenGoingDown";
+
+/**
+ * Componente de barra de navegación para una aplicación de restaurante. Controla la navegación y la interacción del menú desplegable.
+ *
+ * Este componente muestra el logotipo del restaurante y una lista de elementos de navegación, como "Inicio", "Menús", "Contacto", "Ordenar" y "Bolsa de Trabajo".
+ * Puede abrir y cerrar el menú desplegable al hacer clic en el icono de menú.
+ *
+ * @component
+ * @example
+ * <Navbar />
+ *
+ * @returns {JSX.Element} El elemento de barra de navegación.
+ */
 
 export const Navbar = () => {
   const [isMenuClicked, setisMenuClicked] = useState(false);
-  const [goingDown, setGoingDown] = useState(false);
-
   const navigate = useNavigate();
+  const [goingDown] = useScreenGoingDown();
 
   //*? aquí pongo los elementos del menú para que sea más fácil de mantener y escalar, solo en caso de que aumenten alguno recuerden actualizar el css
 
@@ -33,28 +46,11 @@ export const Navbar = () => {
     },
   ];
 
-  //*? Lo de abajo es para controlar si la pantalla está bajando, he pensado volverlo un custom hook pero no se si lo voy a volver a utilizar
+  //*? esto escucha si el goingDown es para abajo y en caso que lo sea regresa el menú desplegable a su lugar
 
   useEffect(() => {
-    let scrollPos = window.scrollY;
-
-    function handleScroll() {
-      //*? si el valor guardado previamente es menor al valor de y de la ventana entonces está bajando
-      if (window.scrollY > scrollPos) {
-        setisMenuClicked(false);
-        setGoingDown(true);
-      } else {
-        setGoingDown(false);
-      }
-      scrollPos = window.scrollY;
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    goingDown && setisMenuClicked(false);
+  }, [goingDown]);
 
   //*? Esta función evalúa el id del elemento del listo y sobre eso es que asigna la nueva navegación
   const handleDirection = (e) => {
