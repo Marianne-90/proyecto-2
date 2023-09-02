@@ -1,10 +1,12 @@
 import { Home, Menus, Order, WorkBox, ContactAndUbication } from "pages";
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+import { Navbar } from "components/Navbar";
 
 export const ProyectRoutes = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
