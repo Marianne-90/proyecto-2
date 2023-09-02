@@ -1,3 +1,59 @@
-.home{
-    height: 300vh;
+
+
+.home .SubNavBar {
+  align-items: center;
+  background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza la página */
+  background-color: var(--softGrey);
+  background-image: url("../../img/fondo-subnavbar.jpg"); /* Ruta a la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+  justify-content: center;
+}
+
+.home .SubNavBar h1,
+.home .SubNavBar h2 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.home .SubNavBar h1 {
+  font-size: 3rem;
+}
+
+.home .SubNavBar h2 {
+  font-family: "Delicious Handrawn", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.home .SubNavBar .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.home .SubNavBar .buttons button {
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 30px;
+  border: none;
+  color: var(--black);
+  font-weight: 900;
+  height: 40px;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+.home .SubNavBar .buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.856);
+}
+
+
+.home #promotions{
+  height: 300px;
 }

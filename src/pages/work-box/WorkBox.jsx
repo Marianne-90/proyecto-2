@@ -1,5 +1,9 @@
 import "./style.css";
 
 export const WorkBox = () => {
-  return <h2>WorkBox</h2>;
+  return (
+    <div className="pages">
+      <h2>WorkBox</h2>;
+    </div>
+  );
 };

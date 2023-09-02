@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import useScreenGoingDown from "hooks/useScreenGoingDown";
+import { handleDirection } from "utils/navigationUtils";
+
 
 /**
  * Componente de barra de navegación para una aplicación de restaurante. Controla la navegación y la interacción del menú desplegable.
@@ -52,12 +54,6 @@ export const Navbar = () => {
     goingDown && setisMenuClicked(false);
   }, [goingDown]);
 
-  //*? Esta función evalúa el id del elemento del listo y sobre eso es que asigna la nueva navegación
-  const handleDirection = (e) => {
-    let id = e.target.id;
-    window.scrollTo({ top: 0, behavior: "smooth" }); //*? esto es para subir la página de forma suave para comenzar la navegación desde arriba
-    navigate(`/${id}`);
-  };
 
   //*? extraí esto del return final para mantener el principio de código limpio o sea que sea más fácil de leer, actualizar y escalar en caso de ser necesario
   const showMenu = () => {
@@ -70,7 +66,7 @@ export const Navbar = () => {
                 <li
                   key={element.name}
                   id={element.id}
-                  onClick={handleDirection}
+                  onClick={() => handleDirection(element.id, navigate)}
                 >
                   {element.name}
                 </li>

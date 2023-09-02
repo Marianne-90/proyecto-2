@@ -1,5 +1,9 @@
 import "./style.css";
 
 export const Menus = () => {
-    return <h2>Menus</h2>;
+  return (
+    <div className="pages">
+      <h2>Menus</h2>;
+    </div>
+  );
 };

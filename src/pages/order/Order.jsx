@@ -1,5 +1,9 @@
 import "./style.css";
 
 export const Order = () => {
-    return <h2>Order</h2>;
+  return (
+    <div className="pages">
+      <h2>Order</h2>;
+    </div>
+  );
 };

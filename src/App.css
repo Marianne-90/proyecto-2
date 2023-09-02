@@ -48,6 +48,7 @@ h6 {
   0% {
     width: 40px;
     border-radius: 10px;
+    right: 10px;
   }
   50% {
     border-top-left-radius: 50px;
@@ -56,6 +57,7 @@ h6 {
   100% {
     width: 100%;
     border-radius: 0px;
+    right: 0;
   }
 }
 
@@ -63,6 +65,7 @@ h6 {
   0% {
     width: 100%;
     border-radius: 0px;
+    right: 0;
   }
   50% {
     border-top-left-radius: 50px;
@@ -71,6 +74,7 @@ h6 {
   100% {
     width: 60px;
     border-radius: 10px;
+    right: 10px;
   }
 }
 
@@ -125,39 +129,40 @@ Nav .logoContainer p span:nth-child(2) {
 }
 
 Nav .menuContainer {
+  align-items: center;
+  animation: decrecimiento .5s ease-in-out; /* Duración y tipo de animación */
+  background-color: var(--black);
+  border-radius: 10px;
+  color: white;
   display: flex;
   gap: 20px;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  justify-content: flex-end;
-  color: white;
-  border-radius: 10px;
-  background-color: var(--black);
-  padding: 0 10px;
   height: 40px;
-  animation: decrecimiento .5s ease-in-out; /* Duración y tipo de animación */
+  justify-content: flex-end;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
 }
 
 Nav .menuContainerClic {
   animation: crecimiento .5s ease-in-out; /* Duración y tipo de animación */
-  width: 100%;
-  justify-content: space-between;
-  white-space: nowrap;
   border-radius: 0px;
+  justify-content: space-between;
+  right: 0;
+  white-space: nowrap;
+  width: 100%;
 }
 
 Nav .menuContainer ul {
+  align-items: center;
   display: flex;
   gap: 20px;
-  align-items: center;
   justify-content: space-between;
 }
 
 Nav .menuContainer ul li {
-  cursor: pointer;
-  color: white;
   /* text-transform: uppercase; */
+  color: white;
+  cursor: pointer;
 }
 
 Nav .menuContainer ul li:hover {
@@ -173,8 +178,8 @@ Nav .menuContainer .menuIcon button {
 @media only screen and (max-width: 500px) {
   Nav .menuContainer {
     flex-direction: column;
-    justify-content: center;
     gap: 0;
+    justify-content: center;
     top:0;
   }
 
@@ -184,13 +189,55 @@ Nav .menuContainer .menuIcon button {
 
   Nav .menuContainer ul{
     flex-direction: column;
-    width: 100%;
     padding: 0;
+    width: 100%;
   }
 
 
 }
 
 .pages {
-  padding: 30px 10px 0 10px;
+  padding: 40px 10px 0 10px;
+}
+
+
+/* Para WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:var(--black);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--softGrey);
+  border-radius: 10px;
+}
+
+/* Para Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color:var(--black);
+}
+
+/* Para scrollbar personalizado en Firefox */
+body::-moz-scrollbar {
+  width: 10px;
+}
+
+/* Para navegadores basados en WebKit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-moz-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 10px;
+}
+
+body::-moz-scrollbar-track {
+  background-color: var(--softGrey);
+  border-radius: 10px;
 }
