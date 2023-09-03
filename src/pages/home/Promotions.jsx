@@ -17,7 +17,7 @@ export const Promotions = () => {
 
   return (
     <div id="promotions" ref={promotionsRef}>
-      <h2>Promotions</h2>;
+      <h2>Promotions</h2>
     </div>
   );
 };
