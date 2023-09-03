@@ -1,8 +1,12 @@
-# React + Vite
+# Strudel Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto representa la página web del **Restaurante Strudel**, donde nuestro enfoque principal es practicar **patrones de diseño** y la aplicación del principio **SOLID**. Todo esto se lleva a cabo mediante la implementación de la metodología ágil **SCRUM**, que nos permite desarrollar de manera eficiente y colaborativa.
 
-Currently, two official plugins are available:
+Puedes ver la aplicación desplegada [aquí](https://proyect-2-strudel.netlify.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
+
+- Menú completo con opciones de comida urbana.
+- Información sobre la ubicación y horarios de operación del restaurante.
+- Galería de imágenes de nuestros deliciosos platillos.
+- Formulario de contacto para realizar consultas o reservaciones.
