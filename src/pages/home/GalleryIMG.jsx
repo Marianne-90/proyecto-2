@@ -15,9 +15,6 @@ import useScrolling from "hooks/useScrolling";
  */
 
 
-
-
-
 export const GalleryIMG = () => {
   const [popImage, setPopImage] = useState(null);
   const [isScrolling] = useScrolling();

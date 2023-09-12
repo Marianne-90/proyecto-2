@@ -1,5 +1,5 @@
 import "./style.css";
-import { SubNavbar, Promotions, GalleryIMG } from "./index";
+import { SubNavbar, Promotions, GalleryIMG, HistoryValues } from "./index";
 
 export const Home = () => {
   return (
@@ -7,6 +7,7 @@ export const Home = () => {
       <SubNavbar />
       <Promotions />
       <GalleryIMG />
+      <HistoryValues />
     </div>
   );
 };
