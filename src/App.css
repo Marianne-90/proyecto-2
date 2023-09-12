@@ -106,9 +106,10 @@ Nav {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  height: 40px;
+  height: 46px;
   animation: regresarPosicion 0.5s ease-in-out;
   z-index: 999;
+  padding: 3px 0;
 }
 
 .subirNav {
@@ -118,6 +119,7 @@ Nav {
 
 Nav .logoContainer {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 Nav .logoContainer p span:nth-child(1) {
@@ -200,7 +202,7 @@ Nav .menuContainer .menuIcon button {
 }
 
 .pages {
-  padding: 40px 10px 0 10px;
+  padding: 46px 10px 0 10px;
 }
 
 

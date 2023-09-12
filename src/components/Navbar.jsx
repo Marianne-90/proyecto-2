@@ -4,7 +4,6 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import useScreenGoingDown from "hooks/useScreenGoingDown";
 import { handleDirection } from "utils/navigationUtils";
 
-
 /**
  * Componente de barra de navegación para una aplicación de restaurante. Controla la navegación y la interacción del menú desplegable.
  *
@@ -54,7 +53,6 @@ export const Navbar = () => {
     goingDown && setisMenuClicked(false);
   }, [goingDown]);
 
-
   //*? extraí esto del return final para mantener el principio de código limpio o sea que sea más fácil de leer, actualizar y escalar en caso de ser necesario
   const showMenu = () => {
     return (
@@ -80,7 +78,10 @@ export const Navbar = () => {
 
   return (
     <nav className={goingDown ? "subirNav" : ""}>
-      <div className="logoContainer">
+      <div
+        className="logoContainer"
+        onClick={() => handleDirection("home", navigate)}
+      >
         <p>
           <span>Strudel</span> <span>Restaurante</span>
         </p>

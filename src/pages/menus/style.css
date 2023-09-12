@@ -1,0 +1,44 @@
+.menus .menuContainer {
+  margin-top: 10px;
+}
+
+.menus .menuContainer .title {
+  background-color: var(--black);
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menus .menuContainer .title h2 {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.menus .menuContainer .title .background {
+  width: 100%;
+  height: 100%;
+}
+
+.menus .menuContainer .title .background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  transition: all 0.9s ease;
+}
+
+.menus .menuContainer .title .background img:hover {
+  transform: scale(1.1);
+}
+
+
+.menus .menuContainer .menuOptions {
+   height: 100vh;
+}
