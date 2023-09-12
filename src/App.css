@@ -96,6 +96,8 @@ h6 {
   }
 }
 
+
+
 Nav {
   position: fixed;
   top: 0;
@@ -106,6 +108,7 @@ Nav {
   background-color: white;
   height: 40px;
   animation: regresarPosicion 0.5s ease-in-out;
+  z-index: 999;
 }
 
 .subirNav {

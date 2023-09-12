@@ -1,11 +1,12 @@
 import "./style.css";
-import { SubNavbar, Promotions } from "./index";
+import { SubNavbar, Promotions, GalleryIMG } from "./index";
 
 export const Home = () => {
   return (
     <div className="home pages">
-     <SubNavbar/>
-     <Promotions/>
+      <SubNavbar />
+      <Promotions />
+      <GalleryIMG />
     </div>
   );
 };

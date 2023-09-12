@@ -1,0 +1,22 @@
+.popimg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  background-color: #1c191783;
+}
+
+.popimg .container {
+  max-width: 1000px;
+  max-height: 100%;
+  cursor: pointer;
+}
+.popimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

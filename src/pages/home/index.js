@@ -1,4 +1,4 @@
 export { SubNavbar } from "./SubNavbar";
 export { Promotions } from "./Promotions";
-export { Gallery } from "./Gallery";
+export { GalleryIMG } from "./GalleryIMG";
 export { HistoryValues } from "./HistoryValues";
