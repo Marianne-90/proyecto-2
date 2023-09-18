@@ -4,8 +4,6 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import usePromotionsGallery from "hooks/usePromotionsGallery";
 import { PROMOTIONS_DATA } from "data/promotions-data";
 
-
-
 /**
  * Componente Promotions: Muestra una galería de promociones con navegación automática y manual.
  *
@@ -36,7 +34,7 @@ export const Promotions = () => {
 
   const { currentIndex, nextSlide, prevSlide } = usePromotionsGallery(
     PROMOTIONS_DATA,
-    4000
+    8000
   );
 
   useEffect(() => {
@@ -66,7 +64,13 @@ export const Promotions = () => {
               left: `${index * 100}%`,
             }}
           >
-            <p>{promo.name}</p>
+            <div className="description">
+              <p className="title">{promo.name}</p>
+              <p className="des">{promo.description}</p>
+            </div>
+            <div className="price">
+              <p>{promo.price}</p>
+            </div>
           </div>
         ))}
         <button className="right" onClick={nextSlide}>

@@ -1,26 +1,26 @@
 export const PROMOTIONS_DATA = [
   {
     id: "1",
-    name: "Promoción 1",
-    description: "Esta es la promoción 1",
-    price: "$111",
+    name: "Combo Clásico",
+    description: "Nuestro combo clásico incluye una hamburguesa, papas fritas y una bebida.",
+    price: "$120",
   },
   {
     id: "2",
-    name: "Promoción 2",
-    description: "Esta es la promoción 2",
-    price: "$222",
+    name: "Tacos Internacionales",
+    description: "Prueba nuestra selección de tacos internacionales con sabores de todo el mundo.",
+    price: "$160",
   },
   {
     id: "3",
-    name: "Promoción 3",
-    description: "Esta es la promoción 3",
-    price: "$333",
+    name: "Menú Vegetariano",
+    description: "Disfruta de nuestro menú vegetariano que incluye ensaladas frescas y platillos sin carne.",
+    price: "$140",
   },
   {
     id: "4",
-    name: "Promoción 4",
-    description: "Esta es la promoción 3",
-    price: "$333",
+    name: "Hamburguesa del Chef",
+    description: "Prueba nuestra hamburguesa gourmet con carne de res premium y papas fritas.",
+    price: "$180",
   },
 ];
