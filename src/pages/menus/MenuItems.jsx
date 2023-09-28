@@ -17,14 +17,16 @@ export const MenuItems = ({ element, viewMenu, setViewMenu }) => {
   };
 
   return (
-    <div className="menuContainer" onClick={handleClic}>
-      <div className="title">
+    <div className="menuContainer">
+      <div className="title" onClick={handleClic}>
         <h2>{element.name}</h2>
         <div className="background">
           <img src={element.background} alt={element.name} />
         </div>
       </div>
-      {viewMenu[element.id] && <MenuOptions />}
+      {viewMenu[element.id] && (
+        <MenuOptions items={element.items} extras={element.extras} />
+      )}
     </div>
   );
 };

@@ -37,8 +37,3 @@
 .menus .menuContainer .title .background img:hover {
   transform: scale(1.1);
 }
-
-
-.menus .menuContainer .menuOptions {
-   height: 100vh;
-}

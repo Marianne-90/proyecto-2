@@ -127,4 +127,5 @@ export const MENU_POSTRE = {
       img: null,
     },
   ],
+  extras:[]
 };

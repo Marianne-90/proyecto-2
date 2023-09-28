@@ -21,7 +21,7 @@ export const MENU_BEBIDAS = {
       title: "Latte",
       size: "350ml",
       description: "Café espresso con leche caliente y espuma de leche.",
-      price: 45,
+      price: 45, 
       img: null,
     },
     {

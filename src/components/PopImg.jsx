@@ -21,7 +21,7 @@ export const PopImg = ({ image, setPopImage }) => {
   return (
     <div className="popimg" onClick={() => setPopImage(null)}>
       <div className="container">
-        <img src={image.img} alt={image.name} />
+        <img src={image.img} />
       </div>
     </div>
   );
