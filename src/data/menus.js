@@ -1,40 +1,22 @@
-import test from "img/menus/desayuno/test.jpg";
-import desayunos from "img/menus/desayunos.jpg"
-import comidas from "img/menus/comidas.jpg"
-import bebidas from "img/menus/bebidas.jpg"
-import postres from "img/menus/postres.jpg"
+import { MENU_BEBIDAS } from "./menus/menu-bebidas";
+import { MENU_COMIDA } from "./menus/menu-comida";
+import { MENU_DESAYUNO } from "./menus/menu-desayuno";
+import { MENU_POSTRE } from "./menus/menu-postre";
+
+
 
 export const MENUS_DATA = [
   {
-    name: "Menú de desayuno",
-    id:"desayuno",
-    background:desayunos,
-    items: [
-      {
-        img: {
-          name: "test",
-          src: test,
-        },
-      },
-    ],
+    ...MENU_DESAYUNO,
   },
 
   {
-    name: "Menú de Comida",
-    id:"comida",
-    background:comidas,
-    items: [],
+    ...MENU_COMIDA,
   },
   {
-    name: "Menú de Bebidas",
-    id:"bebida",
-    background:bebidas,
-    items: [],
+    ...MENU_BEBIDAS,
   },
   {
-    name: "Menú de Postres",
-    id:"postre",
-    background:postres,
-    items: [],
+    ...MENU_POSTRE,
   },
 ];
