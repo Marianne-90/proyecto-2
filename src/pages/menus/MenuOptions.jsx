@@ -23,9 +23,9 @@ export const MenuOptions = ({ items, extras }) => {
             <div key={element.title}>
               <div className="container">
                 <div className="des">
-                  <p>{element.title}</p>
-                  <p>{element.size}</p>
-                  <p>{element.description}</p>
+                  <p className="elementTitle">{element.title}</p>
+                  <p className="size">{element.size}</p>
+                  <p className="description">{element.description}</p>
                 </div>
                 <div className="price">
                   <p>${element.price}</p>
@@ -40,22 +40,26 @@ export const MenuOptions = ({ items, extras }) => {
           );
         })}
       </div>
-      <div className="extras">
-        {extras.map((element) => {
-          return (
-            <div className="container" key={element.title}>
-              <div className="des">
-                <p>{element.title}</p>
-                <p>{element.size}</p>
-                <p>{element.description}</p>
+      {extras.length > 0 && (
+        <div className="extras">
+          <h2>Extras</h2>
+          {extras.map((element) => {
+            return (
+              <div className="container" key={element.title}>
+                <div className="des">
+                  <p className="titleElement">{element.title}</p>
+                  <p className="size">{element.size}</p>
+                  <p>{element.description}</p>
+                </div>
+                <div className="price">
+                  <p>${element.price}</p>
+                </div>
               </div>
-              <div className="price">
-                <p>{element.price}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
+
       {popImage && <PopImg image={popImage} setPopImage={setPopImage} />}
     </div>
   );

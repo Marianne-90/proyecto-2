@@ -37,3 +37,133 @@
 .menus .menuContainer .title .background img:hover {
   transform: scale(1.1);
 }
+
+.menus .menuContainer .menuOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+
+.menus .menuContainer .menuOptions .menuItems {
+  max-width: 700px;
+}
+
+.menus .menuContainer .menuOptions .menuItems .img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 10px 0;
+  cursor: pointer;
+  border: var(--softGrey) 1px solid;
+}
+
+.menus .menuContainer .menuOptions .menuItems .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menus .menuContainer .menuOptions .menuItems .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: var(--softGrey) 1px solid;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .des {
+  padding-right: 5px;
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .des p{
+  margin: 0;
+  padding: 0;
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .des .elementTitle{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--softGrey);
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .des .size{
+  font-size: 1.1em;
+  color: var(--orange);
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .des .description{
+  font-size: 1.1em;
+  color: var(--softGrey);
+}
+
+.menus .menuContainer .menuOptions .menuItems .container .price {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: var(--softGrey) 1px solid;
+  padding: 5px;
+}
+
+
+.menus .menuContainer .menuOptions .menuItems .container .price p {
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  color: var(--softGrey);
+  font-family: 'Delicious Handrawn', cursive;
+}
+
+
+.menus .menuContainer .menuOptions .extras{
+  max-width: 700px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border: var(--softGrey) 1px solid;
+  margin-top: 10px;
+}
+
+.menus .menuContainer .menuOptions .extras h2{
+  text-transform: uppercase;
+  font-family: 'Delicious Handrawn', cursive;
+  font-size: 2.5em;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  color: var(--orange);
+}
+
+.menus .menuContainer .menuOptions .extras .container{
+display: flex;
+justify-content: space-between;
+margin: 10px 0;
+padding-bottom: 10px;
+border-bottom: var(--softGrey) 1px solid;
+}
+
+.menus .menuContainer .menuOptions .extras .container p{
+  margin: 0;
+  padding: 0;
+}
+
+.menus .menuContainer .menuOptions .extras .container .des .titleElement{
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.menus .menuContainer .menuOptions .extras .container .des .size{
+color: var(--orange);
+}
+
+.menus .menuContainer .menuOptions .extras .container .price{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+align-items: center;
+font-weight: 700;
+}
