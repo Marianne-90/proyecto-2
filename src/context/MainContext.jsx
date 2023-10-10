@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const MainContext = createContext(); //*prueba
+export const MainContext = createContext(); 
