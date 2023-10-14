@@ -5,7 +5,7 @@ import { WORK_DATA } from "src/data/workData";
 import { WorkItem } from "./WorkItem";
 
 export const WorkBox = () => {
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="pages">
