@@ -1,4 +1,4 @@
-export const ofertasDeTrabajo = [
+export const WORK_DATA = [
     {
       puesto: "Camarero",
       ubicacion: "Ciudad de México",

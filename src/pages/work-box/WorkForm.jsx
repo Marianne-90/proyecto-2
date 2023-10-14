@@ -34,49 +34,56 @@ export const WorkForm = ({ status }) => {
 
   return (
     <div className="workForm">
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ handleSubmit, isSubmitting }) => (
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name">Nombre</label>
-              <Field type="text" id="name" name="name" />
-              <ErrorMessage name="name" component="div" className="error" />
-            </div>
+      <div className="form">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ handleSubmit, isSubmitting }) => (
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="name">
+                Nombre
+                <Field type="text" id="name" name="name" />
+                <ErrorMessage name="name" component="div" className="error" />
+              </label>
 
-            <div>
-              <label htmlFor="email">Correo Electrónico</label>
-              <Field type="text" id="email" name="email" />
-              <ErrorMessage name="email" component="div" className="error" />
-            </div>
+              <label htmlFor="email">
+                Correo Electrónico
+                <Field type="text" id="email" name="email" />
+                <ErrorMessage name="email" component="div" className="error" />
+              </label>
 
-            <div>
-              <label htmlFor="phone">Teléfono</label>
-              <Field type="text" id="phone" name="phone" />
-              <ErrorMessage name="phone" component="div" className="error" />
-            </div>
+              <label htmlFor="phone">
+                Teléfono
+                <Field type="text" id="phone" name="phone" />
+                <ErrorMessage name="phone" component="div" className="error" />
+              </label>
 
-            <div>
-              <label htmlFor="message">Mensaje</label>
-              <Field as="textarea" id="message" name="message" />
-              <ErrorMessage name="message" component="div" className="error" />
-            </div>
+              <label htmlFor="message">
+                Mensaje
+                <Field as="textarea" id="message" name="message" />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className="error"
+                />
+              </label>
 
-            <div>
-              <label htmlFor="file">Archivo</label>
-              <Field type="file" id="file" name="file" />
-              <ErrorMessage name="file" component="div" className="error" />
-            </div>
+              <label htmlFor="file" id="fileLabel">
+                Añade tu CV
+                <Field type="file" id="file" name="file" />
+                <ErrorMessage name="file" component="div" className="error" />
+              </label>
 
-            <button type="submit" disabled={isSubmitting}>
-              Enviar
-            </button>
-          </form>
-        )}
-      </Formik>
+              <button type="submit" disabled={isSubmitting} id="submitButton">
+                Enviar
+              </button>
+            </form>
+          )}
+        </Formik>
+        <button onClick={() => status(false)} id="close">Cerrar</button>
+      </div>
     </div>
   );
 };

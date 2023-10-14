@@ -39,7 +39,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label,
+button {
   font-family: "Roboto", sans-serif;
   color: var(--black);
 }
@@ -96,8 +98,6 @@ h6 {
   }
 }
 
-
-
 Nav {
   position: fixed;
   top: 0;
@@ -135,7 +135,7 @@ Nav .logoContainer p span:nth-child(2) {
 
 Nav .menuContainer {
   align-items: center;
-  animation: decrecimiento .5s ease-in-out; /* Duración y tipo de animación */
+  animation: decrecimiento 0.5s ease-in-out; /* Duración y tipo de animación */
   background-color: var(--black);
   border-radius: 10px;
   color: white;
@@ -149,7 +149,7 @@ Nav .menuContainer {
 }
 
 Nav .menuContainerClic {
-  animation: crecimiento .5s ease-in-out; /* Duración y tipo de animación */
+  animation: crecimiento 0.5s ease-in-out; /* Duración y tipo de animación */
   border-radius: 0px;
   justify-content: space-between;
   right: 0;
@@ -185,26 +185,23 @@ Nav .menuContainer .menuIcon button {
     flex-direction: column;
     gap: 0;
     justify-content: center;
-    top:0;
+    top: 0;
   }
 
-  Nav .menuContainerClic{
+  Nav .menuContainerClic {
     height: auto;
   }
 
-  Nav .menuContainer ul{
+  Nav .menuContainer ul {
     flex-direction: column;
     padding: 0;
     width: 100%;
   }
-
-
 }
 
 .pages {
   padding: 46px 10px 0 10px;
 }
-
 
 /* Para WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
@@ -212,7 +209,7 @@ Nav .menuContainer .menuIcon button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:var(--black);
+  background-color: var(--black);
   border-radius: 10px;
 }
 
@@ -224,7 +221,7 @@ Nav .menuContainer .menuIcon button {
 /* Para Firefox */
 body {
   scrollbar-width: thin;
-  scrollbar-color:var(--black);
+  scrollbar-color: var(--black);
 }
 
 /* Para scrollbar personalizado en Firefox */

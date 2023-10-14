@@ -1,0 +1,150 @@
+.work .workForm {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.work .workForm .form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 50px);
+  overflow-x: hidden;
+}
+
+.work .workForm form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: var(--orange) 1px solid;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  border-radius: 10px;
+}
+
+.work .workForm form label {
+  width: 100%;
+  color: var(--softGrey);
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.work .workForm form label > * {
+  display: block;
+  margin: 5px 0 10px 0;
+}
+
+.work .workForm form label input,
+.work .workForm form label textarea {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: var(--softGrey) 1px solid;
+  color: var(--softGrey);
+  background-color: none;
+}
+.work .workForm form label textarea {
+  height: 100px;
+}
+
+.work .workForm form label input[type="file"] {
+  opacity: 0; /* Hace que el input[type="file"] sea completamente transparente */
+  width: 0.1px; /* Establece un ancho mínimo para asegurarse de que no ocupe espacio en la página */
+  height: 0.1px; /* Establece una altura mínima */
+  position: absolute; /* Mueve el input fuera de la pantalla */
+}
+
+.work .workForm form #fileLabel {
+  margin: 20px 0;
+  background-color: var(--orange);
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.work .workForm #submitButton {
+  /* margin: 20px 0; */
+  background-color: rgb(67, 151, 67);
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: none;
+  text-align: center;
+}
+
+.work .workForm #close {
+  background-color: var(--softGrey);
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+
+.work .workForm .error {
+  color: red;
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.work > h2 {
+  font-family: "Delicious Handrawn", cursive;
+  color: var(--orange);
+  text-align: center;
+  font-size: 2em;
+}
+
+.work .workItem {
+  border: var(--orange) 1px solid;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.work .workItem button {
+  background-color: var(--orange);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+ font-weight: bold;
+ color: white;
+}
+
+.work .workItem p, .work .workItem li{
+font-size: .9em;
+}
+
+.work .workItem .title, .work .workItem #requisitos{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--softGrey);
+}
+
+    
