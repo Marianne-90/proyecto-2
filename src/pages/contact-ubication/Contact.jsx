@@ -28,6 +28,17 @@ export const Contact = () => {
         <b>Horario</b>
       </p>
       <p>{CONTACT_DATA.hours}</p>
+      <p className="margintop30px">
+        <b>Redes Sociales</b>
+      </p>
+      {CONTACT_DATA.social.map(( element ) => (
+          <p key={element.red}>
+            <b>{element.red}: </b>
+            <a href={element.src} target="_blank" rel="noreferrer">
+              @StrudelOficial
+            </a>
+          </p>
+        ))}
     </div>
   );
 };

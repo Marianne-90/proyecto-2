@@ -40,7 +40,7 @@ export const Footer = () => {
         {CONTACT_DATA.social.map(( element ) => (
           <p key={element.red}>
             <b>{element.red}: </b>
-            <a href="https://www.facebook.com/StrudelOficial" target="_blank">
+            <a href={element.src} target="_blank" rel="noreferrer">
               @StrudelOficial
             </a>
           </p>

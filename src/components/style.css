@@ -45,7 +45,7 @@ footer .contacto {
   justify-content: left;
   align-items: left;
   flex-direction: column;
-  font-size: 1em;
+  font-size: .8em;
 }
 
 footer .redes {
@@ -55,7 +55,7 @@ footer .redes {
   display: flex;
   justify-content: right;
   flex-direction: column;
-  font-size: 1em;
+  font-size: .8em;
 }
 
 footer .autor {

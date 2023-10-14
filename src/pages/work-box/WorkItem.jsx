@@ -1,3 +1,7 @@
 export const WorkItem = () => {
-    return <h2>WorkItem</h2>;
+  return (
+    <div className="work">
+      <h2>Bolsa de Trabajo</h2>
+    </div>
+  );
 };

@@ -20,13 +20,13 @@
 
 .contactContainer .contactAndUbication .contact p {
   color: white;
-  font-size: 1.2em;
+  font-size: .9em;
   text-transform: uppercase;
   margin: 0;
 }
 
 .margintop30px {
-  margin-top: 30px !important;
+  margin-top: 10px !important;
 }
 
 .contactContainer .contactAndUbication .contact a {
@@ -75,7 +75,7 @@
 
 .contactContainer .contactoForm form label{
   width: 100%;
-  font-size: 1.2em;
+  font-size: .9em;
   text-transform: uppercase;
   color: var(--softGrey);
 }
