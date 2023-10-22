@@ -28,7 +28,7 @@ export const Order = () => {
           <h5>Extras</h5>
           <OrderList array={arrayExtra()} type="extra" />
           <Propina change={setPropina} />
-          <p>Total: ${total}.00</p>
+          <p id="total">Total: ${total}.00</p>
         </div>
         <MakeOrder items={arrayItems()} extras={arrayExtra() } total={total} propina={propina}/>
       </div>

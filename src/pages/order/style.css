@@ -1,14 +1,137 @@
-.order{
-    min-height: calc(100vh - 100px);
+.order {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-
-.order .orderList .list .itemElement .resumee{
-display: flex;
-gap: 10px;
+.order .ordenar {
+  width: 100%;
+  max-width: 300px;
+}
+.order .ordenar button {
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 30px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(88, 146, 88);
+  font-family: "Delicious Handrawn", cursive;
 }
 
-.order .orderList .list .itemElement{
-    display:flex;
+.order .ordenar button:hover {
+  background-color: rgb(1, 88, 1);
+}
+
+.order .orderList h5{
+    color: var(--orange);
+}
+
+.order .orderList form{
+margin-top: 30px;
+}
+
+.order .orderList form label{
+    font-size: .9em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.order .orderList form label input{
+    border-radius: 3px;
+    border: var(--softGrey) 1px solid;
+}
+
+.order .orderList form button{
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    display: flex;
     align-items: center;
+    background-color: rgb(120, 199, 126);   
+    padding: 0 10px;
+}
+
+.order .orderList .list .columnNames{
+    display: grid;
+    grid-template-columns: 150px repeat(3, 40px);
+}
+
+.order .orderList .list .columnNames p{
+    font-size: .6em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.order .orderList .list .itemElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: rgba(0, 0, 0, 0.308) 1px solid;
+}
+
+.order .orderList .list .itemElement .resumee {
+  display: grid;
+  grid-template-columns: 150px repeat(3, 40px);
+  max-width: 300px;
+  align-items: center;
+}
+
+.order .orderList .list .itemElement .resumee p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.order .orderList .list .itemElement .resumee p:not(:first-child){
+   text-align: center;
+}
+.order .orderList .list .itemElement .buttons{
+    display: flex;
+    align-items: center;
+}
+
+.order .orderList .list .itemElement .buttons button {
+  border: none;
+  margin-left: 3px;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.order .orderList .list .itemElement .buttons button:nth-child(1) {
+  background-color: rgb(197, 128, 128);
+}
+
+.order .orderList .list .itemElement .buttons button:nth-child(2) {
+  background-color: rgb(128, 197, 134);
+}
+
+.order .orderList .list .itemElement .buttons button:nth-child(3) {
+  background-color: rgb(116, 99, 99);
+}
+
+.order #total{
+    /* font-weight: 700; */
+    color: var(--softGrey);
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(241, 241, 241);
 }

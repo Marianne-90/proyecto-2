@@ -1,10 +1,17 @@
 import useOrder from "src/hooks/useOrder";
+import { BsFillTrashFill } from "react-icons/bs";
 
 export const OrderList = ({ array, type }) => {
   const { handleAddItem, handleReduce, handleDelete} = useOrder();
 
   return (
     <div className="list">
+      <div className="columnNames">
+        <p>nombre</p>
+        <p>P/U</p>
+        <p>cant</p>
+        <p>P/T</p>
+      </div>
       {array.map((element, index) => {
         return (
           <div className="itemElement" key={index}>
@@ -19,7 +26,7 @@ export const OrderList = ({ array, type }) => {
                 -
               </button>
               <button onClick={() => handleAddItem(type, element.title)}>+</button>
-              <button onClick={() => handleDelete(type, element.title)}>delete</button>
+              <button onClick={() => handleDelete(type, element.title)}><BsFillTrashFill/></button>
             </div>
           </div>
         );
