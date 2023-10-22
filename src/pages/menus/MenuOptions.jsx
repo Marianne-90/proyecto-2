@@ -3,11 +3,13 @@ import { MainContext } from "context/MainContext";
 
 import { PopImg } from "src/components/PopImg";
 import useScrolling from "hooks/useScrolling";
+import useOrder from "src/hooks/useOrder";
 
 export const MenuOptions = ({ items, extras }) => {
   const [popImage, setPopImage] = useState(null);
   const { orderList, setOrderList } = useContext(MainContext);
   const [isScrolling] = useScrolling();
+  const { handleAdd } = useOrder();
 
   useEffect(() => {
     isScrolling && setPopImage(null);
@@ -17,12 +19,7 @@ export const MenuOptions = ({ items, extras }) => {
     setPopImage(element);
   };
 
-  const handleAdd = (type, title, price) => {
-    let orders = { ...orderList };
-    orders[type].push({ title, price });
 
-    setOrderList(orders);
-  };
 
   return (
     <div className="menuOptions">

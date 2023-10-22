@@ -1,0 +1,14 @@
+.order{
+    min-height: calc(100vh - 100px);
+}
+
+
+.order .orderList .list .itemElement .resumee{
+display: flex;
+gap: 10px;
+}
+
+.order .orderList .list .itemElement{
+    display:flex;
+    align-items: center;
+}
