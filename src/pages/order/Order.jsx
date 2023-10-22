@@ -4,6 +4,7 @@ import { MainContext } from "context/MainContext";
 import { Propina } from "./Propina";
 import useOrder from "src/hooks/useOrder";
 import { OrderList } from "./OrderList";
+import { MakeOrder } from "./MakeOrder";
 
 export const Order = () => {
   const { orderList } = useContext(MainContext);
@@ -29,9 +30,7 @@ export const Order = () => {
           <Propina change={setPropina} />
           <p>Total: ${total}.00</p>
         </div>
-        <div className="ordenar">
-          <button>Ordenar</button>
-        </div>
+        <MakeOrder items={arrayItems()} extras={arrayExtra() } total={total} propina={propina}/>
       </div>
     </div>
   );
