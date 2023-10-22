@@ -6,8 +6,8 @@ import useOrder from "src/hooks/useOrder";
 import { OrderList } from "./OrderList";
 
 export const Order = () => {
-  const { orderList, setOrderList } = useContext(MainContext);
-  const { handleAdd, handleTotal, arrayItems, arrayExtra } = useOrder();
+  const { orderList } = useContext(MainContext);
+  const { handleTotal, arrayItems, arrayExtra } = useOrder();
 
   const [total, setTotal] = useState(0);
   const [propina, setPropina] = useState(0);
@@ -18,22 +18,14 @@ export const Order = () => {
     setTotal(orderTotal + propina);
   }, [propina, orderList]);
 
-  const handleDelete = () => {
-    console.log("handleDelete");
-  };
-
-  const addMore = () => {
-    console.log("addMore");
-  };
-
   return (
     <div className="pages">
       <div className="order">
         <div className="orderList">
           <h5>Orden</h5>
-          <OrderList array={arrayItems()} />
+          <OrderList array={arrayItems()} type="items" />
           <h5>Extras</h5>
-          <OrderList array={arrayExtra()} />
+          <OrderList array={arrayExtra()} type="extra" />
           <Propina change={setPropina} />
           <p>Total: ${total}.00</p>
         </div>

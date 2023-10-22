@@ -22,6 +22,34 @@ export default function useOrder() {
     return totalPriceSum;
   };
 
+  const handleDelete = (type, title) => {
+    let orders = { ...orderList };
+    delete orders[type][title];
+
+    setOrderList(orders);
+  };
+
+  const handleReduce = (type, title) => {
+    let orders = { ...orderList };
+    if (orders[type][title]["quantity"] > 1) {
+      orders[type][title]["quantity"] -= 1;
+      orders[type][title]["totalPrice"] =
+        orders[type][title]["quantity"] *
+        orders[type][title]["individualPrice"];
+      setOrderList(orders);
+    }
+  };
+
+  const handleAddItem = (type, title) => {
+    let orders = { ...orderList };
+
+    orders[type][title]["quantity"] += 1;
+    orders[type][title]["totalPrice"] =
+      orders[type][title]["quantity"] * orders[type][title]["individualPrice"];
+
+    setOrderList(orders);
+  };
+
   const handleAdd = (type, title, price) => {
     let orders = { ...orderList };
     if (orders[type][title]) {
@@ -31,6 +59,7 @@ export default function useOrder() {
         orders[type][title]["individualPrice"];
 
       console.log("actualizado", orders);
+      setOrderList(orders);
       return;
     }
     orders[type][title] = {
@@ -48,5 +77,8 @@ export default function useOrder() {
     handleTotal,
     arrayItems,
     arrayExtra,
+    handleReduce,
+    handleAddItem,
+    handleDelete,
   };
 }
