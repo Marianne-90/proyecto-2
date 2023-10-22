@@ -103,10 +103,12 @@
 .menus .menuContainer .menuOptions .menuItems .container .price {
   width: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-left: var(--softGrey) 1px solid;
   padding: 5px;
+  gap: 5px;
 }
 
 
@@ -116,6 +118,15 @@
   padding: 0;
   color: var(--softGrey);
   font-family: 'Delicious Handrawn', cursive;
+}
+
+#addButton{
+  border: none;
+  background-color: var(--orange);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 
@@ -163,7 +174,8 @@ color: var(--orange);
 .menus .menuContainer .menuOptions .extras .container .price{
   width: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 align-items: center;
 font-weight: 700;
 }
