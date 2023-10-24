@@ -14,11 +14,21 @@ export default function useOrder() {
 
   const handleTotal = () => {
     const itemsArray = Object.values(orderList["items"]);
-    const totalPriceSum = itemsArray.reduce(
+    const extraArray = Object.values(orderList["extra"]);
+
+    const ArrayPriceSum = itemsArray.reduce(
       (total, item) => total + item.totalPrice,
       0
     );
 
+    const extraPriceSum = extraArray.reduce(
+      (total, extra) => total + extra.totalPrice,
+      0
+    );    
+
+
+
+  const totalPriceSum = ArrayPriceSum + extraPriceSum;
     return totalPriceSum;
   };
 
