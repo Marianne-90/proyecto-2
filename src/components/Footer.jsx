@@ -1,6 +1,18 @@
 import { CONTACT_DATA } from "src/data/contactData.js";
 
 
+
+/**
+ * Componente de Footer contiene los datos principales de contacto con sus respectivos enlaces.
+ *
+ * @component
+ * @example
+ * <Footer />
+ *
+ * @returns {JSX.Element} Elemento Footer.
+ */
+
+
 export const Footer = () => {
   const formatNumber = (phoneNumber) => {
     return phoneNumber.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1-");
