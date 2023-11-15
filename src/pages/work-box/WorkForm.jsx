@@ -1,5 +1,7 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { CheckboxOfTermsAndPrivacy } from "src/components/CheckboxOfTermsAndPrivacy";
+import { useState } from "react";
 
 export const WorkForm = ({ status }) => {
   const initialValues = {
@@ -9,6 +11,7 @@ export const WorkForm = ({ status }) => {
     message: "",
     file: "", // Inicialmente el campo de archivo está vacío
   };
+  const [checkBoxConfirmation, setcheckBoxConfirmation] = useState(false);
 
   const validationSchema = Yup.object({
     name: Yup.string().required("El nombre es obligatorio"),
@@ -75,14 +78,16 @@ export const WorkForm = ({ status }) => {
                 <Field type="file" id="file" name="file" />
                 <ErrorMessage name="file" component="div" className="error" />
               </label>
-
+              <CheckboxOfTermsAndPrivacy state={setcheckBoxConfirmation}/>
               <button type="submit" disabled={isSubmitting} id="submitButton">
                 Enviar
               </button>
             </form>
           )}
         </Formik>
-        <button onClick={() => status(false)} id="close">Cerrar</button>
+        <button onClick={() => status(false)} id="close">
+          Cerrar
+        </button>
       </div>
     </div>
   );

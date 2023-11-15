@@ -7,3 +7,8 @@ export const handleDirection = (id, navigate) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
   navigate(`/${id}`);
 };
+
+export const handleDirectionNewPage = (id) => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.open(`/${id}`, '_blank'); // '_blank' abre la URL en una nueva pestaña
+};
