@@ -2,6 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { CheckboxOfTermsAndPrivacy } from "src/components/CheckboxOfTermsAndPrivacy";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export const WorkForm = ({ status }) => {
   const initialValues = {
@@ -27,12 +28,29 @@ export const WorkForm = ({ status }) => {
     ),
   });
 
-  const handleSubmit = (values, { resetForm }) => {
-    // Manejo del envío del formulario
+  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+    console.log("entró");
+
+    if (!checkBoxConfirmation) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Faltan Campos Importantes",
+      });
+      setSubmitting(false);
+      return;
+    }
+
     console.log(values);
-    alert("mensaje enviado");
     resetForm();
     status(false);
+
+    Swal.fire({
+      icon: "success",
+      title: "Mensaje Enviado",
+      text: "Éxito al Enviar el Mensaje",
+    });
+
   };
 
   return (
@@ -78,7 +96,7 @@ export const WorkForm = ({ status }) => {
                 <Field type="file" id="file" name="file" />
                 <ErrorMessage name="file" component="div" className="error" />
               </label>
-              <CheckboxOfTermsAndPrivacy state={setcheckBoxConfirmation}/>
+              <CheckboxOfTermsAndPrivacy state={setcheckBoxConfirmation} />
               <button type="submit" disabled={isSubmitting} id="submitButton">
                 Enviar
               </button>
