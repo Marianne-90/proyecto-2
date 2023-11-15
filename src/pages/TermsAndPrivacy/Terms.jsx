@@ -63,7 +63,7 @@ export const Terms = () => {
         Si tiene preguntas o inquietudes sobre estos Términos y Condiciones,
         comuníquese con nosotros a través de la siguiente información de
         contacto: Strudel Restaurante Orión norte #501 plaza Anahuac
-        strudel@gmail.com 2211576525 de teléfono] Al utilizar nuestro sitio web,
+        strudel@gmail.com 2211576525. Al utilizar nuestro sitio web,
         usted acepta y está sujeto a estos Términos y Condiciones.
       </p>
     </div>

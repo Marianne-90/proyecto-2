@@ -7,7 +7,6 @@ function App() {
   return (
     <MainProvider>
       <ProyectRoutes />
-      <Footer />
     </MainProvider>
   );
 }

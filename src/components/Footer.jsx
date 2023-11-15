@@ -1,6 +1,6 @@
 import { CONTACT_DATA } from "src/data/contactData.js";
-
-
+import { handleDirection } from "utils/navigationUtils";
+import { useNavigate } from "react-router-dom";
 
 /**
  * Componente de Footer contiene los datos principales de contacto con sus respectivos enlaces.
@@ -12,8 +12,9 @@ import { CONTACT_DATA } from "src/data/contactData.js";
  * @returns {JSX.Element} Elemento Footer.
  */
 
-
 export const Footer = () => {
+  const navigate = useNavigate();
+
   const formatNumber = (phoneNumber) => {
     return phoneNumber.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1-");
 
@@ -49,7 +50,7 @@ export const Footer = () => {
         <p>{CONTACT_DATA.hours}</p>
       </div>
       <div className="redes">
-        {CONTACT_DATA.social.map(( element ) => (
+        {CONTACT_DATA.social.map((element) => (
           <p key={element.red}>
             <b>{element.red}: </b>
             <a href={element.src} target="_blank" rel="noreferrer">
@@ -57,6 +58,16 @@ export const Footer = () => {
             </a>
           </p>
         ))}
+      </div>
+      <div className="termsAndConditions">
+        <ul>
+          <li onClick={() => handleDirection("conditions", navigate)}>
+            Términos y Condiciones
+          </li>
+          <li onClick={() => handleDirection("privacy", navigate)}>
+            Aviso de Privacidad
+          </li>
+        </ul>
       </div>
     </footer>
   );
