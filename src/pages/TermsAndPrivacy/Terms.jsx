@@ -1,7 +1,7 @@
 export const Terms = () => {
   return (
     <div className="terms policy">
-      <h3>Términos y Condiciones de Uso de Strudel Restaurante</h3>
+      <h2>Términos y Condiciones de Uso de Strudel Restaurante</h2>
       <p>Fecha de entrada en vigor: 14/11/2023</p>
       <h3>1. Aceptación de los Términos y Condiciones</h3>
       <p>

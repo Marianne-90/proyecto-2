@@ -1,0 +1,21 @@
+.policy{
+   margin-top: 50px;
+   padding: 0 50px;
+}
+
+.policy h2 {
+    text-align: center;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.policy h3{
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+
+.policy p, .policy  li{
+font-size: .9em;
+}
