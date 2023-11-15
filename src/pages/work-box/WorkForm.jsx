@@ -29,7 +29,7 @@ export const WorkForm = ({ status }) => {
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    console.log("entró");
+
 
     if (!checkBoxConfirmation) {
       Swal.fire({

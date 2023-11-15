@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import { CheckboxOfTermsAndPrivacy } from "src/components/CheckboxOfTermsAndPrivacy";
+import Swal from "sweetalert2";
 
 export const ContactForm = () => {
   const [mail, setMail] = useState({
@@ -8,6 +10,7 @@ export const ContactForm = () => {
     message: "",
     file: null,
   });
+  const [checkBoxConfirmation, setcheckBoxConfirmation] = useState(false);
 
   const inputFile = useRef(null);
   //*! esto es para borrar el archivo seleccionado una vez que lo envío
@@ -22,10 +25,39 @@ export const ContactForm = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!checkBoxConfirmation) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Faltan Campos Importantes",
+      });
+      return;
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: "Mensaje Enviado",
+      text: "Éxito al Enviar el Mensaje",
+    });
+
+    console.log(mail);
+
+    setMail({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      file: null,
+    });
+    
+  };
+
   return (
     <div className="contactoForm">
       <h2>¡Contáctanos!</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Tu Nombre:
           <input
@@ -77,7 +109,7 @@ export const ContactForm = () => {
             onChange={handleInputChange}
           />
         </label>
-
+        <CheckboxOfTermsAndPrivacy state={setcheckBoxConfirmation} />
         <button type="submit">Enviar</button>
       </form>
     </div>
